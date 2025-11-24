@@ -89,7 +89,7 @@ export default function ProductHero() {
                         >
                             <div className="absolute inset-0 bg-gradient-to-b from-neutral-800 to-neutral-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-[2s] ease-in-out">
                                 <img
-                                    src="/images/rudraksha-hero.png"
+                                    src="/dist/images/rudraksha-hero.png"
                                     alt="Sacred 5 Mukhi Rudraksha"
                                     className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-700"
                                 />
