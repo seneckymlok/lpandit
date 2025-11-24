@@ -73,25 +73,27 @@ export default function Navigation() {
                     </motion.button>
 
                     {activeMenu === category.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-4 w-56 bg-neutral-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
-                      >
-                        {category.subcategories.map((sub, subIdx) => (
-                          <motion.a
-                            key={sub}
-                            href="#"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: subIdx * 0.05 }}
-                            className="block px-6 py-3 text-neutral-300 hover:text-divine-gold hover:bg-white/5 transition-all duration-200 text-sm"
-                          >
-                            {sub}
-                          </motion.a>
-                        ))}
-                      </motion.div>
+                      <div className="absolute top-full left-0 pt-4">
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          className="w-56 bg-neutral-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+                        >
+                          {category.subcategories.map((sub, subIdx) => (
+                            <motion.a
+                              key={sub}
+                              href="#"
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: subIdx * 0.05 }}
+                              className="block px-6 py-3 text-neutral-300 hover:text-divine-gold hover:bg-white/5 transition-all duration-200 text-sm"
+                            >
+                              {sub}
+                            </motion.a>
+                          ))}
+                        </motion.div>
+                      </div>
                     )}
                   </div>
                 ))}

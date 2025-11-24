@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Shield, Globe, Flower, Zap, Clock, Leaf, Sun } from 'lucide-react';
 import SacredGeometry from './SacredGeometry';
 import ScrollReveal from './ScrollReveal';
+import rudrakshaHero from '../assets/images/rudraksha-hero.png';
 
 export default function ProductHero() {
     return (
@@ -89,7 +90,7 @@ export default function ProductHero() {
                         >
                             <div className="absolute inset-0 bg-gradient-to-b from-neutral-800 to-neutral-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-[2s] ease-in-out">
                                 <img
-                                    src="/dist/images/rudraksha-hero.png"
+                                    src={rudrakshaHero}
                                     alt="Sacred 5 Mukhi Rudraksha"
                                     className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-700"
                                 />

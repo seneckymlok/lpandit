@@ -2,13 +2,16 @@ import { motion } from 'framer-motion';
 import EnhancedProductCard from './EnhancedProductCard';
 import ScrollReveal from './ScrollReveal';
 
+import rudrakshaMala from '../assets/images/rudraksha_mala.png';
+import premiumBead from '../assets/images/premium_rudraksha_bead.png';
+
 export default function FeaturedCollection() {
     const products = [
         {
             id: '1',
             name: '5 Mukhi Rudraksha Mala',
             price: 1250,
-            image: 'https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?auto=format&fit=crop&q=80&w=800',
+            image: rudrakshaMala,
             category: 'Mala',
             rating: 4.9,
             reviews: 128,
@@ -18,7 +21,7 @@ export default function FeaturedCollection() {
             id: '2',
             name: 'Premium 5 Mukhi Bead',
             price: 550,
-            image: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&q=80&w=800',
+            image: premiumBead,
             category: 'Rudraksha',
             rating: 4.8,
             reviews: 85
@@ -27,7 +30,7 @@ export default function FeaturedCollection() {
             id: '3',
             name: 'Siddha Mala (Collector)',
             price: 5500,
-            image: 'https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&q=80&w=800',
+            image: 'https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?auto=format&fit=crop&q=80&w=800', // Fallback
             category: 'Premium',
             rating: 5.0,
             reviews: 42,

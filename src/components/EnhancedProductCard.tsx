@@ -59,7 +59,7 @@ export default function EnhancedProductCard({ title, price, originalPrice, disco
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5 }}
           >
-            {typeof image === 'string' && image.startsWith('http') ? (
+            {typeof image === 'string' ? (
               <img src={image} alt={title} className="w-full h-full object-cover" />
             ) : (
               <div className="text-9xl filter drop-shadow-lg flex items-center justify-center w-full h-full text-divine-gold">
