@@ -62,6 +62,19 @@ export default function ProductHero() {
                             </div>
                         </ScrollReveal>
 
+                        {/* Mobile Image - Visible only on mobile, placed between features and button */}
+                        <div className="lg:hidden relative w-full max-w-xs mx-auto aspect-[4/5] my-8 rounded-t-[5rem] rounded-b-[1rem] overflow-hidden shadow-2xl border border-white/10 group">
+                            <div className="absolute inset-0 bg-gradient-to-b from-neutral-800 to-neutral-900 flex items-center justify-center">
+                                <img
+                                    src={rudrakshaHero}
+                                    alt="Sacred 5 Mukhi Rudraksha"
+                                    className="w-full h-full object-cover opacity-90"
+                                />
+                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1),transparent_60%)] animate-pulse-slow pointer-events-none" />
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                        </div>
+
                         <ScrollReveal delay={0.8}>
                             <div className="pt-4 flex items-center space-x-8">
                                 <button className="px-10 py-5 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-serif tracking-wider text-lg rounded-full shadow-lg shadow-amber-900/20 transition-all duration-300 hover:scale-105 hover:shadow-amber-900/40">
@@ -74,7 +87,7 @@ export default function ProductHero() {
                         </ScrollReveal>
                     </div>
 
-                    <div className="relative lg:h-[700px] flex items-center justify-center perspective-1000">
+                    <div className="hidden lg:flex relative lg:h-[700px] items-center justify-center perspective-1000">
                         {/* Rotating Mandala Background behind image */}
                         {/* Rotating Mandala Background behind image - REMOVED */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-30">

@@ -252,43 +252,40 @@ export default function SpiritualStory() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative w-full hidden lg:flex justify-center"
             >
-              <div className="relative aspect-square max-w-md mx-auto">
+              <div className="relative h-[600px] lg:h-auto lg:aspect-square w-full max-w-md">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-secondary-600/20 rounded-full blur-3xl" />
 
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="relative w-64 h-[500px]">
-                    {chakras.map((chakra, index) => (
+                {/* Simplified Container Structure for Perfect Centering */}
+                <div className="relative w-full h-full">
+                  {chakras.map((chakra, index) => (
+                    <motion.div
+                      key={chakra.name}
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1, duration: 0.5 }}
+                      className={`absolute left-1/2 -translate-x-1/2 ${chakra.position}`}
+                    >
                       <motion.div
-                        key={chakra.name}
-                        initial={{ scale: 0, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1, duration: 0.5 }}
-                        className={`absolute left-1/2 -translate-x-1/2 ${chakra.position}`}
-                      >
-                        <motion.div
-                          animate={{
-                            scale: [1, 1.2, 1],
-                            opacity: [0.7, 1, 0.7],
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            delay: index * 0.2,
-                          }}
-                          className="w-16 h-16 rounded-full"
-                          style={{
-                            background: `radial-gradient(circle, ${chakra.color}, transparent)`,
-                            boxShadow: `0 0 30px ${chakra.color}`,
-                          }}
-                        />
-                      </motion.div>
-                    ))}
-
-
-                  </div>
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: index * 0.2,
+                        }}
+                        className="w-16 h-16 rounded-full"
+                        style={{
+                          background: `radial-gradient(circle, ${chakra.color}, transparent)`,
+                          boxShadow: `0 0 30px ${chakra.color}`,
+                        }}
+                      />
+                    </motion.div>
+                  ))}
                 </div>
               </div>
             </motion.div>

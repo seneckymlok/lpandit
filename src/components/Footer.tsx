@@ -40,14 +40,14 @@ export default function Footer() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid lg:grid-cols-4 gap-12 mb-16 text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-center lg:justify-start space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-divine-gold to-divine-darkGold rounded-full flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-neutral-900" />
               </div>
@@ -116,7 +116,7 @@ export default function Footer() {
             <h3 className="font-serif text-xl text-neutral-900">Contact Us</h3>
 
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start justify-center lg:justify-start space-x-3">
                 <Phone className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" strokeWidth={1.5} />
                 <div className="space-y-1">
                   <a href="tel:+919710110380" className="text-neutral-600 hover:text-primary-600 transition-colors text-sm block">
@@ -127,7 +127,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start justify-center lg:justify-start space-x-3">
                 <Clock className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
                   <p className="text-neutral-600 text-sm">Support: 9:30am - 9:30pm IST</p>
@@ -137,7 +137,7 @@ export default function Footer() {
 
             <div className="space-y-3 pt-4">
               <h4 className="font-medium text-neutral-900">Get in Touch</h4>
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start justify-center lg:justify-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" strokeWidth={1.5} />
                 <div className="text-neutral-600 text-sm leading-relaxed">
                   <p>Bazzify</p>
