@@ -1,0 +1,86 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#fff8e1',
+          100: '#ffecb3',
+          200: '#ffe082',
+          300: '#ffd54f',
+          400: '#ffca28',
+          500: '#ffc107',
+          600: '#ffb300',
+          700: '#ffa000',
+          800: '#ff8f00',
+          900: '#ff6f00',
+        },
+        secondary: {
+          50: '#fbe9e7',
+          100: '#ffccbc',
+          200: '#ffab91',
+          300: '#ff8a65',
+          400: '#ff7043',
+          500: '#ff5722',
+          600: '#f4511e',
+          700: '#e64a19',
+          800: '#d84315',
+          900: '#bf360c',
+        },
+        'divine-gold': '#D4AF37',
+        'divine-lightGold': '#F4E4BC',
+        'divine-darkGold': '#AA8C2C',
+        'saffron': '#FF9933',
+        'rudraksha-brown': '#5D4037',
+        'cosmic-blue': '#0F172A',
+        'mystic-indigo': '#1a103c',
+        'temple-maroon': '#2d0f12',
+        'deep-purple': '#180d2b',
+        neutral: {
+          50: '#FAF9F7',
+          100: '#F5F3F0',
+          200: '#E8E5E0',
+          300: '#D4CFC7',
+          400: '#A8A199',
+          500: '#7C7569',
+          600: '#5C5449',
+          700: '#3E3932',
+          800: '#2A2520',
+          900: '#1A1714',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Cinzel', 'Playfair Display', 'serif'],
+      },
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+        'float': 'float 8s ease-in-out infinite',
+        'breathe': 'breathe 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'fade-in-up': 'fadeInUp 1.2s ease-out forwards',
+        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        breathe: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.03)' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.05)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
